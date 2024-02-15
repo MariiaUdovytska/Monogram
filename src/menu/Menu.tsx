@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../scss/menu/menu.scss";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -9,30 +9,49 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as Logo } from "../image/logo/logo.svg";
 
 function Menu() {
+	const [showNavDropdown, setShowNavDropdown] = useState(false);
 	return (
-		<Navbar variant="dark" className="navbar-custom" expand="lg">
+		<Navbar
+			variant="dark"
+			className="navbar-custom"
+			expand="lg"
+			onToggle={(expanded) => setShowNavDropdown(expanded)}
+			collapseOnSelect
+		>
 			<Container fluid>
 				<Navbar.Brand href="#home">
 					<Logo className="navbar-custom__logo" />
 				</Navbar.Brand>
-
 				<div className="d-flex flex-row">
 					<Navbar.Toggle aria-controls="offcanvasNavbar" />
 					<Navbar.Offcanvas
 						id="offcanvasNavbar"
 						aria-labelledby="offcanvasNavbarLabel"
-						placement="end"
+						placement="start"
 					>
 						<Offcanvas.Header closeButton>
-							<Offcanvas.Title id="offcanvasNavbarLabel">Menu</Offcanvas.Title>
+							<Navbar.Brand href="#home">
+								<Logo className="navbar-custom__logo" />
+							</Navbar.Brand>
 						</Offcanvas.Header>
 						<Offcanvas.Body className="navbar-custom__body">
-							<Nav className="justify-content-end flex-grow-1 pe-3 align-items-center">
+							<Nav
+								className={
+									showNavDropdown === true
+										? "justify-content-end flex-grow-1 pe-3 align-items-start"
+										: "justify-content-end flex-grow-1 pe-3 align-items-center"
+								}
+							>
 								<Nav.Link href="#">How it Works</Nav.Link>
 								<NavDropdown
-									className="navbar-custom__body-dropdown"
+									className={
+										showNavDropdown === true
+											? "navbar-custom__body-dropdown-offc"
+											: "navbar-custom__body-dropdown"
+									}
 									title="Workflows"
 									id="offcanvasNavbarDropdown"
+									defaultShow={showNavDropdown}
 								>
 									<NavDropdown.Item href="#action3">
 										Audio console

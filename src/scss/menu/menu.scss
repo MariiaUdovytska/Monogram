@@ -6,11 +6,11 @@ $min-font-weight: 200;
 	background-color: #1a2456 !important;
 	font-size: 0.8rem;
 	letter-spacing: 0.1rem;
-	.navbar-custom__logo {
-		color: #efc2b3;
-		&:hover {
-			color: #ff7952;
-		}
+}
+.navbar-custom__logo {
+	color: #efc2b3;
+	&:hover {
+		color: #ff7952;
 	}
 }
 .navbar-custom__body {
@@ -23,6 +23,10 @@ $min-font-weight: 200;
 			color: #ff7952;
 		}
 	}
+	.nav-link.show {
+		color: #efc2b3 !important;
+	}
+	color: #efc2b3;
 	.navbar-custom__body-dropdown {
 		.dropdown-toggle:hover {
 			color: #e3e8ed;
@@ -31,14 +35,27 @@ $min-font-weight: 200;
 		.dropdown-menu {
 			border-radius: $border-radius;
 			a {
-				font-size: 0.9rem;
 				color: #1a2456;
+				font-size: 0.9rem;
 				font-weight: $min-font-weight;
 			}
 		}
 		a {
 			&:hover {
 				background-color: rgba(113, 113, 113, 0.082);
+			}
+		}
+	}
+	.navbar-custom__body-dropdown-offc {
+		.dropdown-menu {
+			background-color: transparent !important;
+			border: unset !important;
+		}
+		a {
+			color: #efc2b3 !important;
+			&:hover {
+				background-color: transparent !important;
+				color: #ff7952 !important;
 			}
 		}
 	}
@@ -72,11 +89,19 @@ $min-font-weight: 200;
 .navbar-toggler {
 	border: unset !important;
 	.navbar-toggler-icon {
-		background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e");
 		filter: invert(29%) sepia(6%) saturate(2964%) hue-rotate(337deg)
 			brightness(118%) contrast(87%);
 	}
 	&:focus {
 		box-shadow: none !important;
+	}
+}
+.offcanvas.show:not(.hiding),
+.offcanvas-toggling {
+	background-color: #1a2456 !important;
+	align-items: flex-start;
+	.btn-close {
+		filter: invert(58%) sepia(5%) saturate(2964%) hue-rotate(337deg)
+			brightness(118%) contrast(87%);
 	}
 }
