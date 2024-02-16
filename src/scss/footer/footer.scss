@@ -1,0 +1,26 @@
+@import "../nullstyle";
+.footer {
+}
+.footer__subscribe {
+	ul {
+		margin: 0px -10px;
+		display: flex;
+		flex-direction: row;
+		padding-left: 0px !important;
+		li {
+			padding: 0px 10px;
+			a {
+				height: 25px;
+				width: 25px;
+				display: block;
+				border-radius: 50%;
+				background-color: #efc2b3;
+				text-align: center;
+				svg {
+					width: 12px;
+					height: 12px;
+				}
+			}
+		}
+	}
+}

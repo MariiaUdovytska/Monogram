@@ -25,9 +25,6 @@ header,
 aside {
 	display: block;
 }
-code {
-	font-family: Prompt, sans-serif;
-}
 html,
 body {
 	height: 100%;
@@ -54,16 +51,16 @@ button::-moz-focus-inner {
 }
 a,
 a:visited {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 a:hover {
-	text-decoration: none;
+	text-decoration: none !important;
 }
 ul li {
-	list-style: none;
+	list-style: none !important;
 }
 img {
-	vertical-align: top;
+	vertical-align: top !important;
 }
 
 h1,
