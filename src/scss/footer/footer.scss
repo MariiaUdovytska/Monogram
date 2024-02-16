@@ -1,7 +1,39 @@
 @import "../nullstyle";
+@mixin font-style-min {
+	font-weight: 200;
+	font-size: 0.8rem;
+}
 .footer {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -10px;
+}
+.footer__copy {
+	display: none;
+}
+.footer__copyd {
+	flex: 0 0 100%;
+	order: 5;
+}
+.footer__p-title {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.footer__p-text {
+	@include font-style-min;
+	letter-spacing: 0.02rem;
+	padding-left: 0px;
+	a {
+		color: #efc2b3;
+		&:hover {
+			color: #ff7952;
+		}
+	}
 }
 .footer__subscribe {
+	flex: 0 0 100%;
+	order: 0;
+	padding: 0px 10px;
 	ul {
 		margin: 0px -10px;
 		display: flex;
@@ -22,5 +54,112 @@
 				}
 			}
 		}
+	}
+	.form-control {
+		background-color: transparent;
+		color: #e3e8ed;
+		border-radius: 0px;
+		border-color: #efc2b3;
+		@include font-style-min;
+		&:focus {
+			@include font-style-min;
+			color: #efc2b3;
+			background-color: transparent;
+			border-color: #ff7952;
+			box-shadow: 0 0 0 0.25rem #ff7a5235;
+		}
+		&::placeholder {
+			color: #e3e8ed;
+			@include font-style-min;
+		}
+	}
+	.btn-primary {
+		background-color: #efc2b3;
+		border: #efc2b3;
+		border-radius: 50rem;
+		text-transform: uppercase;
+		color: #1a2456;
+		font-size: 0.85rem;
+		font-weight: 500;
+		letter-spacing: 0.1rem;
+		&:hover {
+			background-color: #ff7952;
+			color: #1a2456;
+		}
+		&:focus-visible,
+		&:active {
+			background-color: #ff7952 !important;
+			color: #1a2456 !important;
+			box-shadow: 0 0 0 0.25rem #ff7a5235;
+		}
+	}
+	.btn {
+		--bs-btn-padding-x: 1.5rem;
+		--bs-btn-padding-y: 0.5rem;
+	}
+}
+.footer__address {
+	flex: 0 0 50%;
+	padding: 0px 10px;
+	order: 1;
+}
+.footer__links {
+	flex: 0 0 50%;
+	padding: 0px 10px;
+	order: 2;
+}
+.footer__help {
+	flex: 0 0 50%;
+	padding: 0px 10px;
+	order: 3;
+}
+.footer__information {
+	flex: 0 0 50%;
+	padding: 0px 10px;
+	order: 4;
+}
+@media (min-width: 580px) {
+	.footer__subscribe {
+		flex: 0 0 66.6666%;
+		order: 1;
+	}
+	.footer__address {
+		flex: 0 0 33.3333%;
+		order: 0;
+	}
+	.footer__links {
+		flex: 0 0 33.3333%;
+	}
+	.footer__help {
+		flex: 0 0 33.3333%;
+	}
+	.footer__information {
+		flex: 0 0 33.3333%;
+	}
+	.footer__copy {
+		display: block;
+		margin: 18px 0px;
+	}
+	.footer__copyd {
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.footer__subscribe {
+		flex: 0 0 33.3333%;
+		order: 12;
+	}
+	.footer__address {
+		flex: 0 0 16.6666667%;
+		order: 0;
+	}
+	.footer__links {
+		flex: 0 0 16.6666667%;
+	}
+	.footer__help {
+		flex: 0 0 16.6666667%;
+	}
+	.footer__information {
+		flex: 0 0 16.6666667%;
 	}
 }

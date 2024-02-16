@@ -35,8 +35,11 @@
 	}
 }
 
-.footer {
+footer {
 	padding: 40px 20px;
 	background-color: #1a2456 !important;
 	color: #efc2b3;
+	@media (min-width: 580px) {
+		padding: 45px;
+	}
 }

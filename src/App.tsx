@@ -12,7 +12,9 @@ function App() {
 			<div className="page">
 				<Menu />
 				<main className="main"></main>
-				<Footer />
+				<footer>
+					<Footer />
+				</footer>
 			</div>
 		</div>
 	);
