@@ -2,10 +2,13 @@ $border-radius: unset !important;
 $min-font-weight: 200;
 
 .navbar-custom {
-	margin: 15px;
+	margin: 5px;
 	background-color: #1a2456 !important;
 	font-size: 0.8rem;
 	letter-spacing: 0.1rem;
+	@media (min-width: 450px) {
+		margin: 15px;
+	}
 }
 .navbar-custom__logo {
 	color: #efc2b3;
@@ -79,10 +82,14 @@ $min-font-weight: 200;
 	}
 	.nav-link {
 		color: #efc2b3;
-		padding-right: 12px !important;
-		padding-left: 12px !important;
+		padding-right: 4px !important;
+		padding-left: 4px !important;
 		&:focus {
 			color: #efc2b3;
+		}
+		@media (min-width: 450px) {
+			padding-right: 12px !important;
+			padding-left: 12px !important;
 		}
 	}
 }
