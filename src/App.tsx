@@ -5,13 +5,16 @@ import "./scss/style.scss";
 
 import Menu from "./menu/Menu";
 import Footer from "./footer/Footer";
+import ShopHeader from "./header/ShopHeader";
 
 function App() {
 	return (
 		<div className="wrapper">
 			<div className="page">
 				<Menu />
-				<main className="main"></main>
+				<main className="main">
+					<ShopHeader />
+				</main>
 				<footer>
 					<Footer />
 				</footer>

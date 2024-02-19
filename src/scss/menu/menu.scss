@@ -2,12 +2,16 @@ $border-radius: unset !important;
 $min-font-weight: 200;
 
 .navbar-custom {
-	margin: 5px;
+	margin: 5px !important;
+	position: fixed !important;
+	z-index: 100;
+	width: calc(100% - 10px);
 	background-color: #1a2456 !important;
 	font-size: 0.8rem;
 	letter-spacing: 0.1rem;
 	@media (min-width: 450px) {
-		margin: 15px;
+		margin: 15px !important;
+		width: calc(100% - 30px);
 	}
 }
 .navbar-custom__logo {
