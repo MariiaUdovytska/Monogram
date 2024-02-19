@@ -22,6 +22,9 @@
 		width: 100%;
 		h1 {
 			font-size: 2.35rem;
+			@media (min-width: 768px) {
+				letter-spacing: 0.2rem;
+			}
 		}
 		p {
 			font-size: 1.1rem;

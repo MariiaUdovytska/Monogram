@@ -1,6 +1,6 @@
 import React from "react";
-import "../scss/shop-header/shop-header.scss";
-import shopHeader from "../image/shop-header/shop_cta_xl_896f6b8270.webp";
+import "../../scss/shop-header/shop-header.scss";
+import shopHeader from "../../image/shop-header/shop_cta_xl_896f6b8270.webp";
 
 function ShopHeader() {
 	return (

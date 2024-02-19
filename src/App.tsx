@@ -5,7 +5,7 @@ import "./scss/style.scss";
 
 import Menu from "./menu/Menu";
 import Footer from "./footer/Footer";
-import ShopHeader from "./header/ShopHeader";
+import ShopPage from "./shop/ShopPage";
 
 function App() {
 	return (
@@ -13,7 +13,7 @@ function App() {
 			<div className="page">
 				<Menu />
 				<main className="main">
-					<ShopHeader />
+					<ShopPage />
 				</main>
 				<footer>
 					<Footer />
