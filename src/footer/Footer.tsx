@@ -11,7 +11,7 @@ import { ReactComponent as Youtube } from "../image/social-media/youtube.svg";
 
 function Footer() {
 	return (
-		<div className="containerM">
+		<div className="container">
 			<div className="footer">
 				<div className="footer__address pb-4">
 					<p className="text-uppercase footer__p-title">Monogram</p>

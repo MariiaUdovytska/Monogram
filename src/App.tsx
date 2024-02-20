@@ -15,7 +15,7 @@ function App() {
 				<main className="main">
 					<ShopPage />
 				</main>
-				<footer>
+				<footer className="main-footer">
 					<Footer />
 				</footer>
 			</div>
