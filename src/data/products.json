@@ -9,10 +9,10 @@
 		"reviews": "21",
 		"installmentPlan": "або 4 безвідсоткові платежі по ",
 		"cod": "",
-		"image": "./image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
-		"image2": "./image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
+		"image": "../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
+		"image2": "../image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
 		"images": [
-			"./image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp"
+			"../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp"
 		],
 		"stars": "",
 		"waiting": "april",
@@ -35,14 +35,14 @@
 		"reviews": "83",
 		"installmentPlan": "або 4 безвідсоткові платежі по ",
 		"cod": "",
-		"image": "./image/workflows/prod2.webp",
-		"image2": "./image/workflows/prod2-2.webp",
+		"image": "../image/workflows/prod2.webp",
+		"image2": "../image/workflows/prod2-2.webp",
 		"images": [
-			"./image/workflows/prod2-3.webp",
-			"./image/workflows/prod2-4.webp",
-			"./image/workflows/prod2-5.webp",
-			"./image/workflows/prod2-6.webp",
-			"./image/workflows/prod2-7.webp"
+			"../image/workflows/prod2-3.webp",
+			"../image/workflows/prod2-4.webp",
+			"../image/workflows/prod2-5.webp",
+			"../image/workflows/prod2-6.webp",
+			"../image/workflows/prod2-7.webp"
 		],
 		"stars": "",
 		"waiting": "april",
@@ -65,14 +65,14 @@
 		"reviews": "83",
 		"installmentPlan": "або 4 безвідсоткові платежі по ",
 		"cod": "",
-		"image": "./image/workflows/prod3.webp",
-		"image2": "./image/workflows/prod3-2.webp",
+		"image": "../image/workflows/prod3.webp",
+		"image2": "../image/workflows/prod3-2.webp",
 		"images": [
-			"./image/workflows/prod2-5.webp",
-			"./image/workflows/prod2-7.webp",
-			"./image/workflows/prod3-2.webp",
-			"./image/workflows/prod2-6.webp",
-			"./image/workflows/prod3-3.webp"
+			"../image/workflows/prod2-5.webp",
+			"../image/workflows/prod2-7.webp",
+			"../image/workflows/prod3-2.webp",
+			"../image/workflows/prod2-6.webp",
+			"../image/workflows/prod3-3.webp"
 		],
 		"stars": "",
 		"waiting": "april",
@@ -95,12 +95,12 @@
 		"reviews": "83",
 		"installmentPlan": "або 4 безвідсоткові платежі по ",
 		"cod": "",
-		"image": "./image/workflows/prod4.webp",
-		"image2": "./image/workflows/prod2-3.webp",
+		"image": "../image/workflows/prod4.webp",
+		"image2": "../image/workflows/prod2-3.webp",
 		"images": [
-			"./image/workflows/prod4-2.webp",
-			"./image/workflows/prod2-5.webp",
-			"./image/workflows/prod2-4.webp"
+			"../image/workflows/prod4-2.webp",
+			"../image/workflows/prod2-5.webp",
+			"../image/workflows/prod2-4.webp"
 		],
 		"stars": "",
 		"waiting": "april",
