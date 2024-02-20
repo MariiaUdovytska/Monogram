@@ -8,7 +8,7 @@ function ShopPage() {
 		<div className="shop">
 			<ShopHeader />
 			<Workflows />
-			{/* <CoverPart /> */}
+			<CoverPart />
 		</div>
 	);
 }
