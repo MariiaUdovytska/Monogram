@@ -2,7 +2,11 @@ import React from "react";
 import "../../scss/shop-header/shop-header.scss";
 import shopHeader from "../../image/shop-header/shop_cta_xl_896f6b8270.webp";
 
-function ShopHeader() {
+interface ShopHeaderProps {
+	scrollToWorkflows: () => void;
+}
+
+const ShopHeader: React.FC<ShopHeaderProps> = ({ scrollToWorkflows }) => {
 	return (
 		<section className="shop-header">
 			<div className="shop-header__body position-relative">
@@ -14,12 +18,13 @@ function ShopHeader() {
 					<p>Discover the perfect console for yours.</p>
 				</div>
 				<button
+					onClick={scrollToWorkflows}
 					className="shop-header__body-btn position-absolute start-50 translate-middle"
 					type="button"
 				></button>
 			</div>
 		</section>
 	);
-}
+};
 
 export default ShopHeader;

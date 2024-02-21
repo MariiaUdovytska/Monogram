@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import ShopHeader from "./header/ShopHeader";
 import CoverPart from "./coverPart/CoverPart";
 import Workflows from "./workflows/Workflows";
@@ -6,11 +6,20 @@ import productsData from "../data/products.json";
 
 function ShopPage() {
 	const products = productsData;
+	const workflowsRef = useRef<HTMLDivElement>(null);
+
+	const scrollToWorkflows = () => {
+		if (workflowsRef.current) {
+			workflowsRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 
 	return (
 		<div className="shop">
-			<ShopHeader />
-			<Workflows products={products.slice(0, 4)} column={"md"} />
+			<ShopHeader scrollToWorkflows={scrollToWorkflows} />
+			<div ref={workflowsRef}>
+				<Workflows products={products.slice(0, 4)} column={"md"} />
+			</div>
 			<CoverPart />
 			<Workflows products={products.slice(4)} column={"xl"} />
 		</div>
