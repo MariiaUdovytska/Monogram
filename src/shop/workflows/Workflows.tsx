@@ -15,6 +15,7 @@ interface Product {
 
 interface WorkflowsProps {
 	products: Product[];
+	column: string;
 }
 
 function Workflows(data: WorkflowsProps) {
@@ -24,23 +25,40 @@ function Workflows(data: WorkflowsProps) {
 	for (let index = 0; index < productsData.length; index++) {
 		const element = productsData[index];
 		arrayLi.push(
-			<div key={element.id} className="workflows__body-el col-md-6 mb-4 px-4">
+			<div
+				key={element.id}
+				className={
+					data.column === "md"
+						? "workflows__body-el col-md-6 mb-4 px-4"
+						: "col-md-6 col-xl-4 mb-4 px-4 px-lg-4"
+				}
+			>
 				<article
 					className="workflows__body-el-art position-relative"
 					title={element.title}
 				>
 					<a href="#">
 						<header className="image-container position-relative w-100">
-							<img
-								src={element.image}
-								alt={element.title}
-								className="img-start object-fit-cover w-100 h-100 position-absolute top-0 start"
-							/>
-							<img
-								src={element.image2}
-								alt={element.title}
-								className="img-hover object-fit-cover w-100 h-100 position-absolute top-0 start"
-							/>
+							{element.image2 === "" ? (
+								<img
+									src={element.image}
+									alt={element.title}
+									className=" object-fit-cover w-100 h-100 position-absolute top-0 start"
+								/>
+							) : (
+								<>
+									<img
+										src={element.image}
+										alt={element.title}
+										className="img-start object-fit-cover w-100 h-100 position-absolute top-0 start"
+									/>
+									<img
+										src={element.image2}
+										alt={element.title}
+										className="img-hover object-fit-cover w-100 h-100 position-absolute top-0 start"
+									/>
+								</>
+							)}
 						</header>
 						<span className="workflows__body-el-art-preorder text-uppercase position-absolute end-0">
 							Pre-order
