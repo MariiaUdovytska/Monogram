@@ -13,34 +13,43 @@ interface Product {
 	images: string[];
 }
 
-interface WorkflowsProps {
+interface PreviewProductsProps {
 	products: Product[];
 }
 
-function Workflows(data: WorkflowsProps) {
+function PreviewProducts(data: PreviewProductsProps) {
 	let productsData = data.products;
-
 	let arrayLi = [];
 	for (let index = 0; index < productsData.length; index++) {
 		const element = productsData[index];
 		arrayLi.push(
-			<div key={element.id} className="workflows__body-el col-md-6 mb-4 px-4">
+			<div key={element.id} className="col-md-6 col-xl-4 mb-4 px-4 px-lg-4">
 				<article
 					className="workflows__body-el-art position-relative"
 					title={element.title}
 				>
 					<a href="#">
 						<header className="image-container position-relative w-100">
-							<img
-								src={element.image}
-								alt={element.title}
-								className="img-start object-fit-cover w-100 h-100 position-absolute top-0 start"
-							/>
-							<img
-								src={element.image2}
-								alt={element.title}
-								className="img-hover object-fit-cover w-100 h-100 position-absolute top-0 start"
-							/>
+							{element.image2 === "" ? (
+								<img
+									src={element.image}
+									alt={element.title}
+									className=" object-fit-cover w-100 h-100 position-absolute top-0 start"
+								/>
+							) : (
+								<>
+									<img
+										src={element.image}
+										alt={element.title}
+										className="img-start object-fit-cover w-100 h-100 position-absolute top-0 start"
+									/>
+									<img
+										src={element.image2}
+										alt={element.title}
+										className="img-hover object-fit-cover w-100 h-100 position-absolute top-0 start"
+									/>
+								</>
+							)}
 						</header>
 						<span className="workflows__body-el-art-preorder text-uppercase position-absolute end-0">
 							Pre-order
@@ -54,7 +63,6 @@ function Workflows(data: WorkflowsProps) {
 								{element.price}
 							</span>
 						</div>
-						<p>{element.shortInfo}</p>
 						<button
 							className="workflows__body-el-art-footbtn text-uppercase position-absolute top-0 end-0"
 							type="button"
@@ -66,14 +74,13 @@ function Workflows(data: WorkflowsProps) {
 			</div>
 		);
 	}
-
 	return (
-		<section className="workflows pt-4 pt-md-5 pb-4 pb-md-5">
-			<div className="container">
-				<div className="workflows__body row mx-n2 mx-lg-n4 mb-3">{arrayLi}</div>
+		<section className="preview workflows py-4 py-md-5">
+			<div className="preview__body workflows__body container">
+				<div className="row mx-n2 mx-lg-n4">{arrayLi}</div>
 			</div>
 		</section>
 	);
 }
 
-export default Workflows;
+export default PreviewProducts;
