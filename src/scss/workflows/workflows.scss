@@ -1,10 +1,11 @@
+@import "../custom.scss";
 @mixin font-style-buy {
 	font-weight: 600;
 	letter-spacing: 0.1rem;
 	font-size: 0.8rem;
 }
 .workflows {
-	background-color: #f0efed;
+	background-color: $background-color;
 	.workflows__body-el-art:hover {
 		.workflows__body-el-art-footbtn {
 			visibility: visible;
