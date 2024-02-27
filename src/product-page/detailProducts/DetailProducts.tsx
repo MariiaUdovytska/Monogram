@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import "../scss/products-page/products-page.scss";
+import "../../scss/products-page/products-detail.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, FreeMode, Thumbs } from "swiper/modules";
 import "swiper/css";
@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import DetailProductsInfo from "./DetailProductsInfo";
 
 function DetailProducts() {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -17,7 +18,7 @@ function DetailProducts() {
 			<div className="container">
 				<div className="product__body">
 					<div className="product__body-main">
-						<h1 className="">
+						<h1 className="product__body-main-title">
 							Audio Console
 							<span>Pre-order </span>
 						</h1>
@@ -109,6 +110,7 @@ function DetailProducts() {
 							</Swiper>
 						</div>
 					</div>
+					<DetailProductsInfo />
 				</div>
 			</div>
 		</section>
