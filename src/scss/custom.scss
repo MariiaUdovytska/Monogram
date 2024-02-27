@@ -1,1 +1,10 @@
 $background-color: #f0efed;
+@mixin font-style-maxweight {
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	font-size: 0.8rem;
+}
+@mixin font-style-min {
+	font-weight: 200;
+	font-size: 0.8rem;
+}

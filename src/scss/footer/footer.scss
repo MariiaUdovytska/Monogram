@@ -1,8 +1,6 @@
 @import "../nullstyle";
-@mixin font-style-min {
-	font-weight: 200;
-	font-size: 0.8rem;
-}
+@import "../custom.scss";
+
 .footer {
 	display: flex;
 	flex-wrap: wrap;

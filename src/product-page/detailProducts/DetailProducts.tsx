@@ -18,9 +18,11 @@ function DetailProducts() {
 			<div className="container">
 				<div className="product__body">
 					<div className="product__body-main">
-						<h1 className="product__body-main-title">
+						<h1 className="product__body-main-title text-uppercase">
 							Audio Console
-							<span>Pre-order </span>
+							<span className="product__body-main-title-preorder ms-3 px-3">
+								Pre&nbsp;-&nbsp;order
+							</span>
 						</h1>
 						<div className="product__body-main-swiper">
 							<Swiper
