@@ -12,6 +12,8 @@
 		"image": "../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
 		"image2": "../image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
 		"images": [
+			"../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
+			"../image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
 			"../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp"
 		],
 		"stars": "",
@@ -38,6 +40,8 @@
 		"image": "../image/workflows/prod2.webp",
 		"image2": "../image/workflows/prod2-2.webp",
 		"images": [
+			"../image/workflows/prod2.webp",
+			"../image/workflows/prod2-2.webp",
 			"../image/workflows/prod2-3.webp",
 			"../image/workflows/prod2-4.webp",
 			"../image/workflows/prod2-5.webp",
@@ -68,6 +72,8 @@
 		"image": "../image/workflows/prod3.webp",
 		"image2": "../image/workflows/prod3-2.webp",
 		"images": [
+			"../image/workflows/prod3.webp",
+			"../image/workflows/prod3-2.webp",
 			"../image/workflows/prod2-5.webp",
 			"../image/workflows/prod2-7.webp",
 			"../image/workflows/prod3-2.webp",
@@ -98,6 +104,8 @@
 		"image": "../image/workflows/prod4.webp",
 		"image2": "../image/workflows/prod2-3.webp",
 		"images": [
+			"../image/workflows/prod4.webp",
+			"../image/workflows/prod2-3.webp",
 			"../image/workflows/prod4-2.webp",
 			"../image/workflows/prod2-5.webp",
 			"../image/workflows/prod2-4.webp"
@@ -126,6 +134,8 @@
 		"image": "../image/workflows/prod5.webp",
 		"image2": "../image/workflows/prod5-2.webp",
 		"images": [
+			"../image/workflows/prod5.webp",
+			"../image/workflows/prod5-2.webp",
 			"../image/workflows/prod5-3.webp",
 			"../image/workflows/prod5-4.webp",
 			"../image/workflows/prod5-5.webp",
@@ -156,6 +166,8 @@
 		"image": "../image/workflows/prod6.webp",
 		"image2": "../image/workflows/prod6-2.webp",
 		"images": [
+			"../image/workflows/prod6.webp",
+			"../image/workflows/prod6-2.webp",
 			"../image/workflows/prod6-3.webp",
 			"../image/workflows/prod6-4.webp",
 			"../image/workflows/prod6-5.webp"
@@ -184,6 +196,8 @@
 		"image": "../image/workflows/prod7.webp",
 		"image2": "../image/workflows/prod7-2.webp",
 		"images": [
+			"../image/workflows/prod7.webp",
+			"../image/workflows/prod7-2.webp",
 			"../image/workflows/prod7-3.webp",
 			"../image/workflows/prod7-4.webp",
 			"../image/workflows/prod7-5.webp"
@@ -212,6 +226,8 @@
 		"image": "../image/workflows/prod8.webp",
 		"image2": "../image/workflows/prod8-2.webp",
 		"images": [
+			"../image/workflows/prod8.webp",
+			"../image/workflows/prod8-2.webp",
 			"../image/workflows/prod8-3.webp",
 			"../image/workflows/prod8-4.webp",
 			"../image/workflows/prod8-5.webp"
@@ -240,6 +256,8 @@
 		"image": "../image/workflows/prod9.webp",
 		"image2": "../image/workflows/prod9-2.webp",
 		"images": [
+			"../image/workflows/prod9.webp",
+			"../image/workflows/prod9-2.webp",
 			"../image/workflows/prod9-3.webp",
 			"../image/workflows/prod9-4.webp",
 			"../image/workflows/prod9-5.webp"
@@ -268,6 +286,8 @@
 		"image": "../image/workflows/prod10.webp",
 		"image2": "../image/workflows/prod10-2.webp",
 		"images": [
+			"../image/workflows/prod10.webp",
+			"../image/workflows/prod10-2.webp",
 			"../image/workflows/prod10-3.webp",
 			"../image/workflows/prod10-4.webp",
 			"../image/workflows/prod10-5.webp"
@@ -350,6 +370,8 @@
 		"image": "../image/workflows/prod14.webp",
 		"image2": "../image/workflows/prod14-2.webp",
 		"images": [
+			"../image/workflows/prod14.webp",
+			"../image/workflows/prod14-2.webp",
 			"../image/workflows/prod14-3.webp",
 			"../image/workflows/prod14-4.webp",
 			"../image/workflows/prod14-5.webp",
