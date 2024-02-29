@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../scss/menu/menu.scss";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -10,6 +11,7 @@ import { ReactComponent as Logo } from "../image/logo/logo.svg";
 
 function Menu() {
 	const [showNavDropdown, setShowNavDropdown] = useState(false);
+	const [isOffcanvasShown, setIsOffcanvasShown] = useState(false);
 	return (
 		<Navbar
 			variant="dark"
@@ -23,11 +25,16 @@ function Menu() {
 					<Logo className="navbar-custom__logo" />
 				</Navbar.Brand>
 				<div className="d-flex flex-row">
-					<Navbar.Toggle aria-controls="offcanvasNavbar" />
+					<Navbar.Toggle
+						aria-controls="offcanvasNavbar"
+						onClick={() => setIsOffcanvasShown(!isOffcanvasShown)}
+					/>
 					<Navbar.Offcanvas
 						id="offcanvasNavbar"
 						aria-labelledby="offcanvasNavbarLabel"
 						placement="start"
+						show={isOffcanvasShown}
+						onHide={() => setIsOffcanvasShown(false)}
 					>
 						<Offcanvas.Header closeButton>
 							<Navbar.Brand href="#home">
@@ -35,13 +42,7 @@ function Menu() {
 							</Navbar.Brand>
 						</Offcanvas.Header>
 						<Offcanvas.Body className="navbar-custom__body">
-							<Nav
-								className={
-									showNavDropdown === true
-										? "justify-content-end flex-grow-1 pe-3 align-items-start"
-										: "justify-content-end flex-grow-1 pe-3 align-items-center"
-								}
-							>
+							<Nav className="justify-content-end flex-grow-1 pe-3 align-items-start">
 								<Nav.Link href="#">How it Works</Nav.Link>
 								<NavDropdown
 									className={
@@ -69,7 +70,13 @@ function Menu() {
 								<Nav.Link href="#">Download</Nav.Link>
 								<Nav.Link href="#">Blog</Nav.Link>
 								<Nav.Link href="#">Support</Nav.Link>
-								<Nav.Link href="#">Shop</Nav.Link>
+								<Link
+									to="/shop"
+									onClick={() => setIsOffcanvasShown(false)}
+									className="router-link"
+								>
+									Shop
+								</Link>
 							</Nav>
 						</Offcanvas.Body>
 					</Navbar.Offcanvas>

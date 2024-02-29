@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 import { ReactComponent as Instagram } from "../image/social-media/instagram.svg";
 import { ReactComponent as Facebook } from "../image/social-media/facebook.svg";
 import { ReactComponent as Twit } from "../image/social-media/twit.svg";
@@ -76,7 +77,7 @@ function Footer() {
 							<a href="#">How it Works</a>
 						</li>
 						<li>
-							<a href="#">Shop</a>
+							<Link to="/shop">Shop</Link>
 						</li>
 						<li>
 							<a href="#">Download</a>

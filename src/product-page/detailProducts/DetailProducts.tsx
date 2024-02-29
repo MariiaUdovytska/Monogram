@@ -77,7 +77,7 @@ function DetailProducts(data: ProductsProps) {
 								<Swiper
 									loop={true}
 									spaceBetween={10}
-									slidesPerView={3}
+									slidesPerView={productData.images.length <= 3 ? 2 : 3}
 									freeMode={true}
 									watchSlidesProgress={true}
 									navigation={true}

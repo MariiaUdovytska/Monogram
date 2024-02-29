@@ -1,5 +1,6 @@
 import React from "react";
 import "../../scss/workflows/workflows.scss";
+import { Link } from "react-router-dom";
 
 interface Product {
 	id: number;
@@ -37,7 +38,7 @@ function Workflows(data: WorkflowsProps) {
 					className="workflows__body-el-art position-relative"
 					title={element.title}
 				>
-					<a href="#">
+					<Link to={`/products/${element.id}`}>
 						<header className="image-container position-relative w-100">
 							{element.image2 === "" ? (
 								<img
@@ -63,7 +64,7 @@ function Workflows(data: WorkflowsProps) {
 						<span className="workflows__body-el-art-preorder text-uppercase position-absolute end-0">
 							Pre-order
 						</span>
-					</a>
+					</Link>
 					<footer className="mt-2 position-relative ">
 						<div className="mb-2 d-flex flex-row justify-content-between">
 							<div className="text-uppercase">{element.title}</div>
@@ -73,12 +74,14 @@ function Workflows(data: WorkflowsProps) {
 							</span>
 						</div>
 						<p>{element.shortInfo}</p>
-						<button
-							className="workflows__body-el-art-footbtn text-uppercase position-absolute top-0 end-0"
-							type="button"
-						>
-							shop now
-						</button>
+						<Link to={`/products/${element.id}`}>
+							<button
+								className="workflows__body-el-art-footbtn text-uppercase position-absolute top-0 end-0"
+								type="button"
+							>
+								shop now
+							</button>
+						</Link>
 					</footer>
 				</article>
 			</div>
