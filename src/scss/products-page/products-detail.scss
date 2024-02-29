@@ -196,6 +196,40 @@
 			.accordion-body {
 				color: #1a2456 !important;
 				font-weight: 300;
+				.product__body-info-accordion-deskription {
+					strong {
+						font-weight: 500;
+					}
+					ul li {
+						list-style: disc !important;
+						&:first-child {
+							margin-top: 15px;
+						}
+					}
+					span {
+						display: inline-block;
+					}
+				}
+				.product__body-info-accordion-quality li {
+					list-style: disc !important;
+				}
+				.product__body-info-accordion-link {
+					color: #ff8b68;
+					display: inline-block;
+					&::after {
+						display: block;
+						content: ("");
+						background-color: #ff7952;
+						width: 100%;
+						height: 1px;
+						margin-bottom: 5px;
+						border-radius: 10px;
+						visibility: hidden;
+					}
+					&:hover::after {
+						visibility: visible;
+					}
+				}
 			}
 			&:focus {
 				background-color: unset !important;

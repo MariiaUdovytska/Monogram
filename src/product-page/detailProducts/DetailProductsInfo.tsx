@@ -6,20 +6,63 @@ import { ReactComponent as Star } from "../../image/logo/different/star.svg";
 import Form from "react-bootstrap/Form";
 import Accordion from "react-bootstrap/Accordion";
 
-function DetailProductsInfo() {
+interface Product {
+	id: number;
+	title: string;
+	shortInfo: string;
+	price: string;
+	priceOld: string;
+	currency: string;
+	reviews: string;
+	installmentPlan: string;
+	cod: string;
+	stars: string;
+	waiting: string;
+	info: string;
+	description: string;
+	guarantee?: string;
+	quality?: string;
+	shipping?: string;
+	shipping2?: string;
+	shipping3?: string;
+	Warranty?: string;
+	Warranty2?: string;
+}
+
+interface ProductsProps {
+	product: Product;
+}
+
+function DetailProductsInfo(data: ProductsProps) {
+	let productData = data.product;
 	return (
 		<div className="product__body-info">
 			<h1 className="product__body-info-titleT text-uppercase">
-				Audio Console
+				{productData.title}
 				<span className="product__body-info-titleT-preorder mx-3 px-3">
-					Pre-order
+					Pre&nbsp;-&nbsp;order
 				</span>
 			</h1>
-			<p className="product__body-info-price d-flex flex-row justify-content-between">
-				<div className="product__body-info-price-all">
-					<span className="product__body-info-price-now">$499</span>
-					<span className="product__body-info-price-old ms-1">$579</span>
-				</div>
+			<div className="product__body-info-price d-flex flex-row justify-content-between ">
+				{productData.priceOld === "" ? (
+					<div className="product__body-info-price-all">
+						<span className="product__body-info-price-now">
+							{productData.currency}
+							{productData.price}
+						</span>
+					</div>
+				) : (
+					<div className="product__body-info-price-all">
+						<span className="product__body-info-price-now">
+							{productData.currency}
+							{productData.price}
+						</span>
+						<span className="product__body-info-price-old ms-1">
+							{productData.currency}
+							{productData.priceOld}
+						</span>
+					</div>
+				)}
 				<div className="product__body-info-price-star d-flex flex-row">
 					<Star />
 					<Star />
@@ -30,13 +73,14 @@ function DetailProductsInfo() {
 						83
 					</a>
 				</div>
-			</p>
-			<p>
-				or 4 interest-free payments of $124.75 with <Sezzle />
+			</div>
+			<div className="mt-4">
+				or 4 interest-free payments of {productData.currency}
+				{(parseFloat(productData.price) / 4).toFixed(2)} with <Sezzle />
 				&nbsp;
 				<Info />
-			</p>
-			<p className="product__body-info-select d-flex flex-row ">
+			</div>
+			<div className="product__body-info-select mt-3 d-flex flex-row ">
 				<Form.Select
 					aria-label="Default select example"
 					className="rounded-pill me-3"
@@ -55,46 +99,104 @@ function DetailProductsInfo() {
 				>
 					add to bag
 				</button>
-			</p>
-			<p className="product__body-info-estimated">
+			</div>
+			<div className="product__body-info-estimated mt-4">
 				<span>**PRE-ORDER ITEM: </span>
 				<span>Estimated to ship in </span>
 				<span>APRIL**</span>
-			</p>
-			<p className="product__body-info-accordion">
+			</div>
+			<div className="mt-3">{productData.info}</div>
+			<div className="product__body-info-accordion mt-4">
 				<Accordion flush>
 					<Accordion.Item eventKey="0">
 						<Accordion.Header>Product Description</Accordion.Header>
-						<Accordion.Body>test</Accordion.Body>
-					</Accordion.Item>
-					<Accordion.Item eventKey="2">
-						<Accordion.Header>Our Better Editing Guarantee</Accordion.Header>
 						<Accordion.Body>
-							We stand by our products and our promises and we understand that
+							<div
+								className="product__body-info-accordion-deskription"
+								dangerouslySetInnerHTML={{ __html: productData.description }}
+							/>
+							<p>
+								Learn more about our pre-order status{" "}
+								<a href="#" className="product__body-info-accordion-link">
+									here
+								</a>
+							</p>
 						</Accordion.Body>
 					</Accordion.Item>
-					<Accordion.Item eventKey="3">
-						<Accordion.Header>Build Quality and Materials</Accordion.Header>
-						<Accordion.Body>
-							We take great pride and care in building our prod
-						</Accordion.Body>
-					</Accordion.Item>
-					<Accordion.Item eventKey="4">
-						<Accordion.Header>Shipping Information</Accordion.Header>
-						<Accordion.Body>
-							Free shipping to most region<br></br>Included with your Monogram
-							hardw
-						</Accordion.Body>
-					</Accordion.Item>
-					<Accordion.Item eventKey="5">
-						<Accordion.Header>Warranty</Accordion.Header>
-						<Accordion.Body>
-							Included with your Monogram hardw<br></br>Free shipping to most
-							regions
-						</Accordion.Body>
-					</Accordion.Item>
+					{productData.guarantee === undefined ? (
+						""
+					) : (
+						<Accordion.Item eventKey="2">
+							<Accordion.Header>Our Better Editing Guarantee</Accordion.Header>
+							<Accordion.Body>{productData.guarantee}</Accordion.Body>
+						</Accordion.Item>
+					)}
+					{productData.quality === undefined ? (
+						""
+					) : (
+						<Accordion.Item eventKey="3">
+							<Accordion.Header>Build Quality and Materials</Accordion.Header>
+							<Accordion.Body>
+								{productData.quality}
+								<ul className="product__body-info-accordion-quality mt-3">
+									<li>Precision CNC-machined from solid aerospace aluminium</li>
+									<li>
+										Aluminum sandblasted surface for a premium textured finish
+									</li>
+									<li>
+										Anodized aluminum coating for durability and scratch
+										resistance
+									</li>
+									<li>
+										Strong neodymium magnetic connectors allow for quick and
+										secure attachment
+									</li>
+									<li>Micro spring-loaded electrical contacts</li>
+									<li>Soft-touch ABS plastic underside</li>
+									<li>
+										Grip ring on underside prevents unwanted slipping on table
+										tops
+									</li>
+								</ul>
+							</Accordion.Body>
+						</Accordion.Item>
+					)}
+					{productData.shipping === undefined ? (
+						""
+					) : (
+						<Accordion.Item eventKey="4">
+							<Accordion.Header>Shipping Information</Accordion.Header>
+							<Accordion.Body>
+								<p>{productData.shipping}</p>
+								<p>
+									{productData.shipping2}
+									<a href="#" className="product__body-info-accordion-link">
+										{" "}
+										Shipping & Sales FAQ
+									</a>
+									{productData.shipping3}
+								</p>
+							</Accordion.Body>
+						</Accordion.Item>
+					)}
+					{productData.Warranty === undefined ? (
+						""
+					) : (
+						<Accordion.Item eventKey="5">
+							<Accordion.Header>Warranty</Accordion.Header>
+							<Accordion.Body>
+								<p>{productData.Warranty}</p>
+								<p>
+									{productData.Warranty2}
+									<a href="#" className="product__body-info-accordion-link">
+										Learn more here.
+									</a>
+								</p>
+							</Accordion.Body>
+						</Accordion.Item>
+					)}
 				</Accordion>
-			</p>
+			</div>
 		</div>
 	);
 }

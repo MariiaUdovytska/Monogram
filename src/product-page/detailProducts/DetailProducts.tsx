@@ -17,6 +17,24 @@ interface Product {
 	image: string;
 	image2: string;
 	images: string[];
+	shortInfo: string;
+	price: string;
+	priceOld: string;
+	currency: string;
+	reviews: string;
+	installmentPlan: string;
+	cod: string;
+	stars: string;
+	waiting: string;
+	info: string;
+	description: string;
+	guarantee?: string;
+	quality?: string;
+	shipping?: string;
+	shipping2?: string;
+	shipping3?: string;
+	Warranty?: string;
+	Warranty2?: string;
 }
 
 interface ProductsProps {
@@ -80,7 +98,7 @@ function DetailProducts(data: ProductsProps) {
 							</div>
 						)}
 					</div>
-					<DetailProductsInfo />
+					<DetailProductsInfo product={productData} />
 				</div>
 			</div>
 		</section>
