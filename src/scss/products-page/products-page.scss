@@ -2,3 +2,19 @@
 .products-page {
 	background-color: $background-color;
 }
+.included__body {
+	background-color: #1a2456 !important;
+	color: whitesmoke;
+	.included__body-title {
+		font-size: 1.7rem;
+		font-weight: 500;
+	}
+	ul li {
+		list-style: disc !important;
+		margin-bottom: 5px;
+	}
+	ul li,
+	p {
+		font-weight: 300;
+	}
+}
