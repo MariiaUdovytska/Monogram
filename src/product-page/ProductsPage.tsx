@@ -4,6 +4,7 @@ import "../scss/products-page/products-page.scss";
 import DetailProducts from "./detailProducts/DetailProducts";
 import productsData from "../data/products.json";
 import IncludedWithMonogram from "./IncludedWithMonogram";
+import Recommended from "./Recommended";
 
 function ProductsPage() {
 	const { id } = useParams();
@@ -19,6 +20,7 @@ function ProductsPage() {
 				<>
 					<DetailProducts product={product} />
 					<IncludedWithMonogram />
+					<Recommended />
 				</>
 			) : (
 				<p className="product h-100 ms-5 text-uppercase text-center">
