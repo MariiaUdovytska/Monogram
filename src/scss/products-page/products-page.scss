@@ -43,3 +43,43 @@
 		}
 	}
 }
+.recommended__title {
+	@include font-style-weightandsize;
+}
+.additional {
+	.additional__img {
+		max-height: 100%;
+		@media (min-width: 768px) {
+			max-height: 263px;
+		}
+		@media (min-width: 992px) {
+			max-height: 330px;
+		}
+	}
+	.additional__article {
+		width: 90%;
+		height: 85%;
+		color: #1a2456;
+		background-color: hsla(0, 0%, 100%, 0.8);
+		z-index: 10;
+		padding: 15px;
+		header {
+			@include font-style-weightandsize;
+		}
+		p {
+			font-size: 1.15rem;
+		}
+		footer {
+			a {
+				background-color: #1a2456;
+				color: whitesmoke;
+				@include font-style-maxweight;
+			}
+		}
+		@media (min-width: 992px) {
+			width: 85%;
+			height: 75%;
+			padding: 45px;
+		}
+	}
+}

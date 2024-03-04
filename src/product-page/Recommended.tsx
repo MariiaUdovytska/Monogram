@@ -36,6 +36,10 @@ function Recommended() {
 
 	return (
 		<div className="recommended my-4">
+			<div className="container">
+				<h3 className="recommended__title">ALSO RECOMMENDED</h3>
+			</div>
+
 			<Workflows products={shuffledProducts.slice(0, 3)} column={"xl"} />
 		</div>
 	);

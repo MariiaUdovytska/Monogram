@@ -26,7 +26,10 @@
 		"shipping2": "Note: International shipments do not include sales tax. For more questions about ordering, see our ",
 		"shipping3": " or contact us at support@monogramcc.com",
 		"Warranty": "Included with your Monogram hardware is a limited one (1) year manufacturer's warranty from the date of purchase.",
-		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. "
+		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. ",
+		"additionalImg": "../image/workflows/mono_poster_1.webp",
+		"additionalName": "Everyday Essentials",
+		"additionalP": "With Mini Console, Monogram makes interacting with common everyday apps like Zoom and Chrome easier and more fun to use."
 	},
 	{
 		"id": 1,
@@ -59,7 +62,10 @@
 		"shipping2": "Note: International shipments do not include sales tax. For more questions about ordering, see our ",
 		"shipping3": " or contact us at support@monogramcc.com",
 		"Warranty": "Included with your Monogram hardware is a limited one (1) year manufacturer's warranty from the date of purchase.",
-		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. "
+		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. ",
+		"additionalImg": "../image/workflows/mono_poster_2.webp",
+		"additionalName": "Audio and Music Production",
+		"additionalP": "Add dynamic expression and a tactile experience to your digital music composition with Creative Console. Personalize your compositions and productions with the uniquely modular toolset that can be used with Digital Audio Workstations."
 	},
 	{
 		"id": 2,
@@ -92,7 +98,10 @@
 		"shipping2": "Note: International shipments do not include sales tax. For more questions about ordering, see our ",
 		"shipping3": " or contact us at support@monogramcc.com",
 		"Warranty": "Included with your Monogram hardware is a limited one (1) year manufacturer's warranty from the date of purchase.",
-		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. "
+		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. ",
+		"additionalImg": "../image/workflows/mono_poster_3.webp",
+		"additionalName": "Photo Editing and Retouching",
+		"additionalP": "See how Creative Console can streamline your entire photo editing and retouching workflow from start to finish."
 	},
 	{
 		"id": 3,
@@ -123,7 +132,10 @@
 		"shipping2": "Note: International shipments do not include sales tax. For more questions about ordering, see our ",
 		"shipping3": " or contact us at support@monogramcc.com",
 		"Warranty": "Included with your Monogram hardware is a limited one (1) year manufacturer's warranty from the date of purchase.",
-		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. "
+		"Warranty2": "We also offer Monogram Care, which provides you with 36 months of additional coverage including accidental. ",
+		"additionalImg": "../image/workflows/mono_poster_4.webp",
+		"additionalName": "Video Editing and Color",
+		"additionalP": "Video Console is a powerful tool that gives you the flexibility to both edit and color grade with unmatched precision."
 	},
 	{
 		"id": 4,

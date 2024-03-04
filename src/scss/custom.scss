@@ -8,3 +8,8 @@ $background-color: #f0efed;
 	font-weight: 200;
 	font-size: 0.8rem;
 }
+@mixin font-style-weightandsize {
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	font-size: 1.6rem;
+}

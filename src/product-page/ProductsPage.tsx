@@ -5,6 +5,7 @@ import DetailProducts from "./detailProducts/DetailProducts";
 import productsData from "../data/products.json";
 import IncludedWithMonogram from "./IncludedWithMonogram";
 import Recommended from "./Recommended";
+import AdditionalInfo from "./AdditionalInfo";
 
 function ProductsPage() {
 	const { id } = useParams();
@@ -20,10 +21,11 @@ function ProductsPage() {
 				<>
 					<DetailProducts product={product} />
 					<IncludedWithMonogram />
+					<AdditionalInfo additional={product} />
 					<Recommended />
 				</>
 			) : (
-				<p className="product h-100 ms-5 text-uppercase text-center">
+				<p className="product ms-5 text-uppercase text-center">
 					Product not found
 				</p>
 			)}
