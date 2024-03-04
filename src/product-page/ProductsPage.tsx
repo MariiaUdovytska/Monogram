@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../scss/products-page/products-page.scss";
 import DetailProducts from "./detailProducts/DetailProducts";
 import productsData from "../data/products.json";
@@ -27,6 +27,11 @@ function ProductsPage() {
 					Product not found
 				</p>
 			)}
+			<nav className="products-page__back container mb-5">
+				<Link className="router-link" to="/shop">
+					← Back to Shop
+				</Link>
+			</nav>
 		</div>
 	);
 }
