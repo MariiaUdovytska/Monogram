@@ -24,7 +24,7 @@ interface Product {
 	reviews: string;
 	installmentPlan: string;
 	cod: string;
-	stars: string;
+	stars: number;
 	waiting: string;
 	info: string;
 	description: string;

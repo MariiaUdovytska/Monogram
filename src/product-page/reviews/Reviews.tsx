@@ -1,5 +1,6 @@
 import React from "react";
 import "../../scss/products-page/products-page.scss";
+import Stars from "../../stars/Stars";
 
 interface ReviewsProd {
 	id: string;
@@ -7,7 +8,7 @@ interface ReviewsProd {
 	icon: string;
 	status: string;
 	data: string;
-	star: string;
+	star: number;
 	mainText: string;
 	text: string;
 }
@@ -33,7 +34,9 @@ function Reviews(data: ReviewsProps) {
 							<span className="ms-2">{review.status}</span>
 						</div>
 						<div className="d-flex flex-row justify-content-between mb-2">
-							<div className="me-2">{review.star}</div>
+							<div className="product__body-info-price-star">
+								<Stars count={review.star} />
+							</div>
 							<div>{review.data}</div>
 						</div>
 						<h5>{review.mainText}</h5>

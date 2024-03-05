@@ -2,9 +2,10 @@ import React from "react";
 import "../../scss/products-page/products-detail.scss";
 import { ReactComponent as Sezzle } from "../../image/logo/different/sezzle.svg";
 import { ReactComponent as Info } from "../../image/logo/different/info.svg";
-import { ReactComponent as Star } from "../../image/logo/different/star.svg";
 import Form from "react-bootstrap/Form";
 import Accordion from "react-bootstrap/Accordion";
+import ReviewsArray from "../../data/reviews.json";
+import Stars from "../../stars/Stars";
 
 interface Product {
 	id: number;
@@ -16,7 +17,7 @@ interface Product {
 	reviews: string;
 	installmentPlan: string;
 	cod: string;
-	stars: string;
+	stars: number;
 	waiting: string;
 	info: string;
 	description: string;
@@ -35,6 +36,7 @@ interface ProductsProps {
 
 function DetailProductsInfo(data: ProductsProps) {
 	let productData = data.product;
+	let reviewsCount = ReviewsArray;
 	return (
 		<div className="product__body-info">
 			<h1 className="product__body-info-titleT text-uppercase">
@@ -64,13 +66,9 @@ function DetailProductsInfo(data: ProductsProps) {
 					</div>
 				)}
 				<div className="product__body-info-price-star d-flex flex-row">
-					<Star />
-					<Star />
-					<Star />
-					<Star />
-					<Star />
-					<a href="#" className="px-2 rounded-pill">
-						83
+					<Stars count={productData.stars} />
+					<a href="#" className="px-2 rounded-pill d-flex align-items-center">
+						{reviewsCount.length}
 					</a>
 				</div>
 			</div>

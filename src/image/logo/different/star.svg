@@ -1,5 +1,5 @@
-<svg class="rating-module--star--6c71b" viewBox="0 0 512 512">
-	<path class="rating-module--starBg--27af0" fill="#1a2456" d="M512,198.5l-176.9-25.7L256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3l158.2,83.2L384,323.3L512,198.5L512,198.5z"></path>
-	<path class="rating-module--starHalf--84d2e" fill="#1a2456" d="M256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3V12.5z"></path>
-	<path class="rating-module--starFull--a4530" fill="#1a2456" d="M512,198.5l-176.9-25.7L256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3l158.2,83.2L384,323.3L512,198.5L512,198.5z"></path>
+<svg fill="currentColor" viewBox="0 0 512 512">
+	<path fill="currentColor" d="M512,198.5l-176.9-25.7L256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3l158.2,83.2L384,323.3L512,198.5L512,198.5z"></path>
+	<path fill="currentColor" d="M256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3V12.5z"></path>
+	<path fill="currentColor" d="M512,198.5l-176.9-25.7L256,12.5l-79.1,160.3L0,198.5l128,124.8L97.8,499.5L256,416.3l158.2,83.2L384,323.3L512,198.5L512,198.5z"></path>
 </svg>

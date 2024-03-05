@@ -115,16 +115,19 @@
 	}
 }
 .review {
-	.review__ul-li-art {
-		font-weight: 300;
-		img {
-			max-width: 100px;
-			max-height: 100px;
-		}
-		.review__ul-li-art-text {
-			ul li {
-				list-style: decimal !important;
-				padding-top: 10px;
+	.review__ul {
+		padding-left: unset;
+		.review__ul-li-art {
+			font-weight: 300;
+			img {
+				max-width: 100px;
+				max-height: 100px;
+			}
+			.review__ul-li-art-text {
+				ul li {
+					list-style: decimal !important;
+					padding-top: 10px;
+				}
 			}
 		}
 	}
