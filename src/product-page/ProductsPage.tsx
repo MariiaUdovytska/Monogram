@@ -6,6 +6,7 @@ import productsData from "../data/products.json";
 import IncludedWithMonogram from "./IncludedWithMonogram";
 import Recommended from "./Recommended";
 import AdditionalInfo from "./AdditionalInfo";
+import ReviewsWrapper from "./reviews/ReviewsWrapper";
 
 function ProductsPage() {
 	const { id } = useParams();
@@ -23,6 +24,7 @@ function ProductsPage() {
 					<IncludedWithMonogram />
 					<AdditionalInfo additional={product} />
 					<Recommended />
+					<ReviewsWrapper />
 				</>
 			) : (
 				<p className="product ms-5 text-uppercase text-center">
