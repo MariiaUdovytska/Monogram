@@ -14,6 +14,7 @@ interface AdditionalInfoProps {
 
 function AdditionalInfo(data: AdditionalInfoProps) {
 	let additionalInfo = data.additional;
+	if (additionalInfo.additionalImg === undefined) return <></>;
 
 	return (
 		<section className="additional mt-4">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useParams } from "react-router-dom";
 import "../scss/products-page/products-page.scss";
 import DetailProducts from "./detailProducts/DetailProducts";
@@ -11,20 +11,28 @@ import ReviewsWrapper from "./reviews/ReviewsWrapper";
 function ProductsPage() {
 	const { id } = useParams();
 	const product = productsData.find((p) => p.id.toString() === id);
+	const reviewsRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [id]);
 
+	const scrollToReviews = () => {
+		if (reviewsRef.current) {
+			reviewsRef.current.scrollIntoView({ behavior: "smooth" });
+		}
+	};
 	return (
 		<div className="products-page h-100">
 			{product ? (
 				<>
-					<DetailProducts product={product} />
+					<DetailProducts product={product} scrollToReviews={scrollToReviews} />
 					<IncludedWithMonogram />
 					<AdditionalInfo additional={product} />
 					<Recommended />
-					<ReviewsWrapper />
+					<div ref={reviewsRef}>
+						<ReviewsWrapper />
+					</div>
 				</>
 			) : (
 				<p className="product ms-5 text-uppercase text-center">

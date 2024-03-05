@@ -32,11 +32,13 @@ interface Product {
 
 interface ProductsProps {
 	product: Product;
+	clickScrollToReviews: () => void;
 }
 
 function DetailProductsInfo(data: ProductsProps) {
 	let productData = data.product;
 	let reviewsCount = ReviewsArray;
+
 	return (
 		<div className="product__body-info">
 			<h1 className="product__body-info-titleT text-uppercase">
@@ -67,7 +69,11 @@ function DetailProductsInfo(data: ProductsProps) {
 				)}
 				<div className="product__body-info-price-star d-flex flex-row">
 					<Stars count={productData.stars} />
-					<a href="#" className="px-2 rounded-pill d-flex align-items-center">
+					<a
+						onClick={data.clickScrollToReviews}
+						href="#"
+						className="px-2 rounded-pill d-flex align-items-center"
+					>
 						{reviewsCount.length}
 					</a>
 				</div>

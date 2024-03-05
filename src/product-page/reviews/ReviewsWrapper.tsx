@@ -1,6 +1,6 @@
 import React from "react";
 import "../../scss/products-page/products-page.scss";
-import ReviewsArray from "../../data/reviews.json";
+import ReviewsArray from "../../data/reviews.json"; //use json as moq of server responce
 import Reviews from "./Reviews";
 
 function ReviewsWrapper() {

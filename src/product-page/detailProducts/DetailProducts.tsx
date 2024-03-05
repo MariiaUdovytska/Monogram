@@ -39,6 +39,7 @@ interface Product {
 
 interface ProductsProps {
 	product: Product;
+	scrollToReviews: () => void;
 }
 
 function DetailProducts(data: ProductsProps) {
@@ -98,7 +99,10 @@ function DetailProducts(data: ProductsProps) {
 							</div>
 						)}
 					</div>
-					<DetailProductsInfo product={productData} />
+					<DetailProductsInfo
+						product={productData}
+						clickScrollToReviews={data.scrollToReviews}
+					/>
 				</div>
 			</div>
 		</section>
