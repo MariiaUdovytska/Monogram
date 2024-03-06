@@ -1,0 +1,26 @@
+@import "../custom.scss";
+.bag {
+	display: flex;
+	flex-direction: column;
+	.offcanvas-header {
+		div {
+			cursor: pointer;
+			color: whitesmoke;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			padding: 12px 0px;
+			svg {
+				margin: 0px 10px;
+			}
+		}
+	}
+	.bag__product {
+		background-color: whitesmoke;
+		flex: 1 1 auto;
+	}
+	.bag__subtotal {
+		.bag__subtotal-price {
+			color: whitesmoke;
+		}
+	}
+}

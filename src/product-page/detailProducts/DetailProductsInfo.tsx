@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../scss/products-page/products-detail.scss";
 import { ReactComponent as Sezzle } from "../../image/logo/different/sezzle.svg";
 import { ReactComponent as Info } from "../../image/logo/different/info.svg";
@@ -6,6 +6,7 @@ import Form from "react-bootstrap/Form";
 import Accordion from "react-bootstrap/Accordion";
 import ReviewsArray from "../../data/reviews.json";
 import Stars from "../../stars/Stars";
+import Bag from "../../bag/Bag";
 
 interface Product {
 	id: number;
@@ -38,6 +39,10 @@ interface ProductsProps {
 function DetailProductsInfo(data: ProductsProps) {
 	let productData = data.product;
 	let reviewsCount = ReviewsArray;
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 
 	return (
 		<div className="product__body-info">
@@ -100,10 +105,12 @@ function DetailProductsInfo(data: ProductsProps) {
 				<button
 					type="button"
 					className="product__body-info-btn rounded-pill py-2 px-4 text-uppercase"
+					onClick={handleShow}
 				>
 					add to bag
 				</button>
 			</div>
+			<Bag show={show} onHide={handleClose} />
 			<div className="product__body-info-estimated mt-4">
 				<span>**PRE-ORDER ITEM: </span>
 				<span>Estimated to ship in </span>
