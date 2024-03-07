@@ -7,7 +7,6 @@ import IncludedWithMonogram from "./IncludedWithMonogram";
 import Recommended from "./Recommended";
 import AdditionalInfo from "./AdditionalInfo";
 import ReviewsWrapper from "./reviews/ReviewsWrapper";
-import Bag from "../bag/Bag";
 
 function ProductsPage() {
 	const { id } = useParams();

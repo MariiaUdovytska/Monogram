@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../scss/bag/bag.scss";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as ArrowLeft } from "../image/logo/different/arrow-left.svg";
+import ProductList from "./ProductList";
 
 interface BagProps {
 	show: boolean;
@@ -24,9 +25,8 @@ function Bag(props: BagProps) {
 					Continue Shopping
 				</div>
 			</Offcanvas.Header>
-			<div className="bag__product px-3 py-3">
-				Some text as placeholder. In real life you can have the elements you
-				have chosen. Like, text, images, lists, etc.
+			<div className="bag__product px-3 py-3 w-100">
+				<ProductList />
 			</div>
 			<div className="bag__subtotal w-100 px-3 py-3 d-flex flex-column">
 				<div className="bag__subtotal-price text-uppercase w-100 d-flex flex-row justify-content-between">
@@ -55,7 +55,7 @@ function Bag(props: BagProps) {
 						</p>
 					</form>
 				) : (
-					<form className="d-flex flex-column align-items-center">
+					<form>
 						<button
 							type="button"
 							className="bag__subtotal-btn text-uppercase w-100 py-3 my-4 rounded-pill"
