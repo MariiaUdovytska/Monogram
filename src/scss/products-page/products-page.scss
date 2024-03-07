@@ -26,14 +26,9 @@
 		display: inline-block;
 		line-height: 0.7rem;
 		&::after {
-			display: block;
-			content: ("");
+			@include after-line;
 			background-color: #ff3e05;
-			width: 100%;
-			height: 1px;
 			margin-top: 5px;
-			border-radius: 10px;
-			visibility: hidden;
 		}
 		&:hover {
 			color: #ff3e05;

@@ -31,14 +31,9 @@
 		}
 	}
 	li::after {
-		display: block;
-		content: ("");
-		background-color: #ff7952;
-		width: 100%;
-		height: 1px;
 		margin-bottom: 5px;
-		border-radius: 10px;
-		visibility: hidden;
+		background-color: #ff7952;
+		@include after-line;
 	}
 	li:hover::after {
 		visibility: visible;
