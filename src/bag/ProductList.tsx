@@ -1,20 +1,33 @@
 import React from "react";
-import "../scss/bag/bag.scss";
+import "../scss/bag/product-list.scss";
 import Form from "react-bootstrap/Form";
 import TestFoto from "../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp";
 import { ReactComponent as Media } from "../image/logo/different/better_editing_guaranteed.svg";
+import { ReactComponent as X } from "../image/logo/different/x.svg";
+import { ReactComponent as Amex } from "../image/logo/payment/amex.svg";
+import { ReactComponent as Mastercard } from "../image/logo/payment/mastercard.svg";
+import { ReactComponent as Visa } from "../image/logo/payment/visa.svg";
+import { ReactComponent as Appay } from "../image/logo/payment/appay.svg";
+import { ReactComponent as Gpay } from "../image/logo/payment/gpay.svg";
+import { ReactComponent as Shoppay } from "../image/logo/payment/shoppay.svg";
 
 function ProductList() {
 	return (
 		<div className="product-list d-flex flex-column">
-			<div className="product-list__alert">
+			<div className="product-list__alert px-5 py-3 text-center mb-3">
 				You are ~ $99 away from Free&nbsp;Shipping
 			</div>
 			<ul className="product-list__list">
-				<li>
-					<img src={TestFoto} alt="test" />
-					<div>
-						<p>mini console</p>
+				<li className="d-flex flex-row mb-3 pb-3">
+					<img
+						src={TestFoto}
+						alt="test"
+						className="product-list__list-img object-fit-cover"
+					/>
+					<div className="product-list__list-info ms-2">
+						<a href="#" className="text-uppercase">
+							mini console
+						</a>
 						<p>$249</p>
 						<Form.Select
 							aria-label="Default select example"
@@ -29,43 +42,37 @@ function ProductList() {
 							<option value="3">6</option>
 						</Form.Select>
 					</div>
-				</li>
-				<li>
-					<img src={TestFoto} alt="test" />
-					<div>
-						<p>test console</p>
-						<p>$249</p>
-						<Form.Select
-							aria-label="Default select example"
-							className="rounded-pill me-3"
-						>
-							<option>1</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="3">4</option>
-							<option value="3">5</option>
-							<option value="3">6</option>
-						</Form.Select>
-					</div>
+					<button
+						type="button"
+						className="product-list__list-cansel h-100 w-100"
+					>
+						<X />
+					</button>
 				</li>
 			</ul>
-			<div className="product-list__care">
-				<h6> monogram care</h6>
-				<p>
+			<div className="product-list__care px-3 py-3 mb-3">
+				<h6 className="text-uppercase"> monogram care</h6>
+				<p className="product-list__care-p">
 					For $39 you will have service and support from the people that know
 					the product best.
 				</p>
-				<p>
-					<button type="button">add to bag</button>
+				<p className="product-list__care-btns">
+					<button
+						type="button"
+						className="rounded-pill py-1 px-4 text-uppercase me-2"
+					>
+						add to bag
+					</button>
 					<a href="#">Lern more</a>
 				</p>
 			</div>
-			<div className="product-list__line"></div>
-			<div className="product-list__media">
-				<Media />
+			<div className="product-list__line">
+				<hr className="w-100" />
+			</div>
+			<div className="product-list__media d-flex flex-row mb-3">
+				<Media className="me-1" />
 				<div>
-					<h6>Monogram Better Editing Guarantee</h6>
+					<h6 className="text-uppercase">Monogram Better Editing Guarantee</h6>
 					<p>
 						Try Monogram Creative Console in your own workflow for 100 days. If
 						it does not improve your editing experience, you can return it for a
@@ -73,10 +80,27 @@ function ProductList() {
 					</p>
 				</div>
 			</div>
-			<div className="product-list__payment">
-				<h6>secure payment</h6>
-				<ul>
-					<li></li>
+			<div className="product-list__payment d-flex flex-column align-items-center mb-3">
+				<h6 className="text-uppercase">secure payment</h6>
+				<ul className="d-flex flex-row">
+					<li>
+						<Amex />
+					</li>
+					<li>
+						<Mastercard />
+					</li>
+					<li>
+						<Visa />
+					</li>
+					<li>
+						<Appay />
+					</li>
+					<li>
+						<Gpay />
+					</li>
+					<li>
+						<Shoppay />
+					</li>
 				</ul>
 			</div>
 		</div>

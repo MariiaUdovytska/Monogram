@@ -1,0 +1,122 @@
+@import "../custom.scss";
+
+.product-list {
+	.product-list__alert {
+		background-color: #fdf0d7;
+		color: #7f5d1c;
+		font-weight: 200;
+	}
+	.product-list__list {
+		padding-left: 0px;
+		li {
+			border-bottom: 1px solid #1a2456;
+		}
+		.product-list__list-img {
+			flex: 1 1 auto;
+			max-width: 100px;
+			max-height: 100px;
+		}
+		.product-list__list-info {
+			flex: 1 1 auto;
+			a {
+				@include font-style-bag-footer;
+				color: #1a2456;
+				display: inline-block;
+			}
+			a::after {
+				@include after-line;
+				background-color: #080b1b;
+			}
+			a:hover {
+				color: #080b1b !important;
+			}
+			a:hover::after {
+				visibility: visible;
+			}
+			p {
+				font-weight: 200;
+			}
+			.form-select {
+				width: 60px;
+				border: 2px solid #1a2456;
+				font-weight: 600;
+				padding: 0px 12px;
+				&:focus {
+					border-color: #1a245680;
+					outline: 0;
+					box-shadow: 0 0 0 0.2rem rgba(60, 69, 111, 0.5);
+				}
+			}
+		}
+		.product-list__list-cansel {
+			background-color: transparent;
+			flex: 1 1 2%;
+			svg {
+				color: #080b1b84;
+			}
+			svg:hover {
+				color: #080b1b;
+			}
+		}
+	}
+	.product-list__care {
+		background-color: #ffe8e1;
+		font-weight: 200;
+		h6 {
+			@include font-style-bag-footer;
+		}
+		.product-list__care-p {
+			@include font-style-min;
+			color: #854938;
+		}
+		.product-list__care-btns {
+			button {
+				font-size: 0.6rem;
+				@include button-add-to-bag;
+			}
+			a {
+				@include font-style-min;
+				color: #854938;
+				display: inline-block;
+				&::after {
+					background-color: #854938;
+					@include after-line;
+				}
+				&:hover::after {
+					visibility: visible;
+				}
+			}
+		}
+	}
+	.product-list__line {
+		hr {
+			border-width: 1px;
+			border-color: #1a2456;
+		}
+	}
+	.product-list__media {
+		svg {
+			margin-top: -25px;
+		}
+		h6 {
+			@include font-style-bag-footer;
+		}
+		p {
+			@include font-style-min;
+		}
+	}
+	.product-list__payment {
+		h6 {
+			font-size: 0.75rem;
+			font-weight: 200;
+			color: #6c757d;
+		}
+		ul {
+			padding-left: 0px;
+			margin: 0px -5px;
+			li {
+				padding: 0px 5px;
+			}
+		}
+	}
+}

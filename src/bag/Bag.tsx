@@ -55,7 +55,7 @@ function Bag(props: BagProps) {
 						</p>
 					</form>
 				) : (
-					<form>
+					<form className="d-flex flex-column align-items-center">
 						<button
 							type="button"
 							className="bag__subtotal-btn text-uppercase w-100 py-3 my-4 rounded-pill"
