@@ -7,6 +7,7 @@ import Accordion from "react-bootstrap/Accordion";
 import ReviewsArray from "../../data/reviews.json";
 import Stars from "../../stars/Stars";
 import Bag from "../../bag/Bag";
+import { addToBag, ProductInBag } from "../../local-storage/LocalStorage";
 
 interface Product {
 	id: number;
@@ -40,9 +41,24 @@ function DetailProductsInfo(data: ProductsProps) {
 	let productData = data.product;
 	let reviewsCount = ReviewsArray;
 	const [show, setShow] = useState(false);
+	const [quantityProduct, setQuantityProduct] = useState<number>(1);
+
+	const handleQuantityChange = (
+		event: React.ChangeEvent<HTMLSelectElement>
+	) => {
+		setQuantityProduct(parseInt(event.target.value));
+	};
 
 	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const handleShow = () => {
+		setShow(true);
+		const productInfo: ProductInBag = {
+			id: productData.id,
+			price: productData.price,
+			quantity: quantityProduct,
+		};
+		addToBag(productInfo);
+	};
 
 	return (
 		<div className="product__body-info">
@@ -93,14 +109,16 @@ function DetailProductsInfo(data: ProductsProps) {
 				<Form.Select
 					aria-label="Default select example"
 					className="rounded-pill me-3"
+					value={quantityProduct}
+					onChange={handleQuantityChange}
 				>
 					<option>1</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
-					<option value="3">4</option>
-					<option value="3">5</option>
-					<option value="3">6</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
 				</Form.Select>
 				<button
 					type="button"

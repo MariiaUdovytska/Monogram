@@ -3,6 +3,9 @@ import "../scss/bag/bag.scss";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as ArrowLeft } from "../image/logo/different/arrow-left.svg";
 import ProductList from "./ProductList";
+import { ProductListInfo } from "./SelectedProduct";
+import { ProductInBag, getCartProducts } from "../local-storage/LocalStorage";
+import productsData from "../data/products.json";
 
 interface BagProps {
 	show: boolean;
@@ -11,6 +14,19 @@ interface BagProps {
 
 function Bag(props: BagProps) {
 	let [discount, setDiscount] = useState(false);
+	let itemsFromLocalStorage = getCartProducts();
+	const items = itemsFromLocalStorage.map((item) => {
+		const product = productsData.find((p) => p.id === item.id);
+		const productInfo: ProductListInfo = {
+			id: item.id,
+			price: item.price,
+			quantity: item.quantity,
+			image: product?.image,
+			title: product?.title,
+			currency: product?.currency,
+		};
+		return productInfo;
+	});
 
 	return (
 		<Offcanvas
@@ -26,7 +42,7 @@ function Bag(props: BagProps) {
 				</div>
 			</Offcanvas.Header>
 			<div className="bag__product px-3 py-3 w-100">
-				<ProductList />
+				<ProductList items={items} />
 			</div>
 			<div className="bag__subtotal w-100 px-3 py-3 d-flex flex-column">
 				<div className="bag__subtotal-price text-uppercase w-100 d-flex flex-row justify-content-between">

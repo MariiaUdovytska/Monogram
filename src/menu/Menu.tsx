@@ -8,6 +8,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as Logo } from "../image/logo/logo.svg";
+import BagIcon from "../bag/BagIcon";
 
 function Menu() {
 	const [showNavDropdown, setShowNavDropdown] = useState(false);
@@ -83,10 +84,11 @@ function Menu() {
 						</Navbar.Offcanvas>
 						<Form className="d-flex align-items-center navbar-custom__basket">
 							<Nav.Link className="navbar-custom__basket-i" href="#cart">
-								<i
+								<BagIcon />
+								{/* <i
 									className="bi bi-bag"
 									style={{ fontSize: "25px", color: "#efc2b3" }}
-								></i>
+								></i> */}
 							</Nav.Link>
 							<NavDropdown title="USD" id="currencyDropdown">
 								<NavDropdown.Item href="#USD">USD ($)</NavDropdown.Item>
