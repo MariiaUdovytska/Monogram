@@ -23,7 +23,7 @@ function ProductList(props: ProductListProps) {
 			</div>
 			<ul className="product-list__list">
 				{props.items.map((item) => (
-					<SelectedProduct item={item} />
+					<SelectedProduct key={item.id} item={item} />
 				))}
 			</ul>
 			<div className="product-list__care px-3 py-3 mb-3">

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { ProductInBag } from "../local-storage/LocalStorage";
+import { updateProductQuantity } from "../local-storage/LocalStorage";
 import Form from "react-bootstrap/Form";
 import { ReactComponent as X } from "../image/logo/different/x.svg";
+import { useCart } from "../local-storage/CartContext";
 
 export interface ProductListInfo {
 	id: number;
@@ -19,12 +20,25 @@ interface SelectedProductProps {
 function SelectedProduct(props: SelectedProductProps) {
 	const data = props.item;
 	const [quantityProduct, setQuantityProduct] = useState<number>(data.quantity);
+	const { updateCartCount } = useCart();
 
 	const handleQuantityChange = (
 		event: React.ChangeEvent<HTMLSelectElement>
 	) => {
-		setQuantityProduct(parseInt(event.target.value));
+		const newQuantity = parseInt(event.target.value);
+		setQuantityProduct(newQuantity);
+		updateProductQuantity(data.id, newQuantity);
+		updateCartCount();
 	};
+
+	const optionsLength = Math.max(6, quantityProduct);
+	const options = Array.from({ length: optionsLength }, (_, i) => i + 1).map(
+		(number) => (
+			<option key={number} value={number}>
+				{number}
+			</option>
+		)
+	);
 
 	return (
 		<li className="d-flex flex-row mb-3 pb-3">
@@ -47,12 +61,7 @@ function SelectedProduct(props: SelectedProductProps) {
 					value={quantityProduct}
 					onChange={handleQuantityChange}
 				>
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
+					{options}
 				</Form.Select>
 			</div>
 			<button type="button" className="product-list__list-cansel h-100 w-100">

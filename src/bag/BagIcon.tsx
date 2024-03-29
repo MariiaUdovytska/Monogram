@@ -1,6 +1,5 @@
 import React from "react";
 import "../scss/menu/menu.scss";
-import { getCartProducts } from "../local-storage/LocalStorage";
 import { useCart } from "../local-storage/CartContext";
 
 function BagIcon() {
