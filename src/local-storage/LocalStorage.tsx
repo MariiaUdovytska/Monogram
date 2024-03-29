@@ -5,7 +5,7 @@ export interface ProductInBag {
 }
 
 export function addToBag(product: ProductInBag) {
-	const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+	const cart: ProductInBag[] = JSON.parse(localStorage.getItem("cart") || "[]");
 	cart.push(product);
 	localStorage.setItem("cart", JSON.stringify(cart));
 }

@@ -8,6 +8,7 @@ import ReviewsArray from "../../data/reviews.json";
 import Stars from "../../stars/Stars";
 import Bag from "../../bag/Bag";
 import { addToBag, ProductInBag } from "../../local-storage/LocalStorage";
+import { useCart } from "../../local-storage/CartContext";
 
 interface Product {
 	id: number;
@@ -42,6 +43,7 @@ function DetailProductsInfo(data: ProductsProps) {
 	let reviewsCount = ReviewsArray;
 	const [show, setShow] = useState(false);
 	const [quantityProduct, setQuantityProduct] = useState<number>(1);
+	const { updateCartCount } = useCart();
 
 	const handleQuantityChange = (
 		event: React.ChangeEvent<HTMLSelectElement>
@@ -51,13 +53,14 @@ function DetailProductsInfo(data: ProductsProps) {
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => {
-		setShow(true);
 		const productInfo: ProductInBag = {
 			id: productData.id,
 			price: productData.price,
 			quantity: quantityProduct,
 		};
 		addToBag(productInfo);
+		updateCartCount();
+		setShow(true);
 	};
 
 	return (
@@ -112,7 +115,6 @@ function DetailProductsInfo(data: ProductsProps) {
 					value={quantityProduct}
 					onChange={handleQuantityChange}
 				>
-					<option>1</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
