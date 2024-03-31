@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { updateProductQuantity } from "../local-storage/LocalStorage";
+import {
+	updateProductQuantity,
+	removeProductFromCart,
+} from "../local-storage/LocalStorage";
 import Form from "react-bootstrap/Form";
 import { ReactComponent as X } from "../image/logo/different/x.svg";
 import { useCart } from "../local-storage/CartContext";
@@ -29,6 +32,11 @@ function SelectedProduct(props: SelectedProductProps) {
 		setQuantityProduct(newQuantity);
 		updateProductQuantity(data.id, newQuantity);
 		updateCartCount();
+	};
+
+	const handleDeleteProduct = () => {
+		removeProductFromCart(data.id);
+		updateCartCount(); // Оновлюємо лічильник корзини, якщо він є
 	};
 
 	const optionsLength = Math.max(6, quantityProduct);
@@ -64,7 +72,11 @@ function SelectedProduct(props: SelectedProductProps) {
 					{options}
 				</Form.Select>
 			</div>
-			<button type="button" className="product-list__list-cansel h-100 w-100">
+			<button
+				type="button"
+				onClick={handleDeleteProduct}
+				className="product-list__list-cansel h-100 w-100"
+			>
 				<X />
 			</button>
 		</li>

@@ -36,3 +36,9 @@ export function updateProductQuantity(productId: number, quantity: number) {
 		console.error("Product not found in the cart.");
 	}
 }
+
+export function removeProductFromCart(productId: number) {
+	const cart: ProductInBag[] = JSON.parse(localStorage.getItem("cart") || "[]");
+	const updatedCart = cart.filter((product) => product.id !== productId);
+	localStorage.setItem("cart", JSON.stringify(updatedCart));
+}
