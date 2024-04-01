@@ -28,6 +28,13 @@ function Bag(props: BagProps) {
 		return productInfo;
 	});
 
+	const subtotal = items.reduce(
+		(acc, item) => acc + parseFloat(item.price) * item.quantity,
+		0
+	);
+
+	const currency = items.length > 0 ? items[0].currency : "";
+
 	return (
 		<Offcanvas
 			show={props.show}
@@ -47,7 +54,10 @@ function Bag(props: BagProps) {
 			<div className="bag__subtotal w-100 px-3 py-3 d-flex flex-column">
 				<div className="bag__subtotal-price text-uppercase w-100 d-flex flex-row justify-content-between">
 					<span>subtotal</span>
-					<span>555</span>
+					<span>
+						{currency}
+						{subtotal.toFixed(2)}
+					</span>
 				</div>
 				{discount ? (
 					<form className="d-flex flex-column align-items-center">

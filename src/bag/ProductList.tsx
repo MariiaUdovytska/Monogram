@@ -1,8 +1,6 @@
 import React from "react";
 import "../scss/bag/product-list.scss";
-
 import { ReactComponent as Media } from "../image/logo/different/better_editing_guaranteed.svg";
-
 import { ReactComponent as Amex } from "../image/logo/payment/amex.svg";
 import { ReactComponent as Mastercard } from "../image/logo/payment/mastercard.svg";
 import { ReactComponent as Visa } from "../image/logo/payment/visa.svg";

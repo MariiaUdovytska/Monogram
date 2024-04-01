@@ -36,7 +36,7 @@ function SelectedProduct(props: SelectedProductProps) {
 
 	const handleDeleteProduct = () => {
 		removeProductFromCart(data.id);
-		updateCartCount(); // Оновлюємо лічильник корзини, якщо він є
+		updateCartCount();
 	};
 
 	const optionsLength = Math.max(6, quantityProduct);
