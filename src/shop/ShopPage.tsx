@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import ShopHeader from "./header/ShopHeader";
 import CoverPart from "./coverPart/CoverPart";
 import Workflows from "./workflows/Workflows";
@@ -7,6 +7,10 @@ import productsData from "../data/products.json";
 function ShopPage() {
 	const products = productsData;
 	const workflowsRef = useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	});
 
 	const scrollToWorkflows = () => {
 		if (workflowsRef.current) {
