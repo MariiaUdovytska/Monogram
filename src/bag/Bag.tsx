@@ -4,7 +4,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as ArrowLeft } from "../image/logo/different/arrow-left.svg";
 import ProductList from "./ProductList";
 import { ProductListInfo } from "./SelectedProduct";
-import { ProductInBag, getCartProducts } from "../local-storage/LocalStorage";
+import { getCartProducts } from "../local-storage/LocalStorage";
 import productsData from "../data/products.json";
 
 interface BagProps {

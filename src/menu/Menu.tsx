@@ -85,10 +85,6 @@ function Menu() {
 						<Form className="d-flex align-items-center navbar-custom__basket">
 							<Nav.Link className="navbar-custom__basket-i" href="#cart">
 								<BagIcon />
-								{/* <i
-									className="bi bi-bag"
-									style={{ fontSize: "25px", color: "#efc2b3" }}
-								></i> */}
 							</Nav.Link>
 							<NavDropdown title="USD" id="currencyDropdown">
 								<NavDropdown.Item href="#USD">USD ($)</NavDropdown.Item>
