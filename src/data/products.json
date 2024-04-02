@@ -9,12 +9,12 @@
 		"reviews": "21",
 		"installmentPlan": "or 4 interest-free payments of ",
 		"cod": "",
-		"image": "../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
-		"image2": "../image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
+		"image": "./image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
+		"image2": "./image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
 		"images": [
-			"../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
-			"../image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
-			"../image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp"
+			"./image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp",
+			"./image/workflows/Everyday-Bundle-Mocks-horizontal_1920x1281_crop_center.jpg.webp",
+			"./image/workflows/Everyday-Bundle-Mocks-final_1366x911_crop_center.jpg.webp"
 		],
 		"stars": 4,
 		"waiting": "april",
