@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Monogram/static/css/main.c550b629.css",
-    "main.js": "/Monogram/static/js/main.f4682732.js",
+    "main.js": "/Monogram/static/js/main.27560875.js",
     "static/js/592.ed2663c9.chunk.js": "/Monogram/static/js/592.ed2663c9.chunk.js",
     "static/media/shop_cta_xl_896f6b8270.webp": "/Monogram/static/media/shop_cta_xl_896f6b8270.1bd3caa741ceecfb9925.webp",
     "static/media/bootstrap-icons.woff?": "/Monogram/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
@@ -26,11 +26,11 @@
     "static/media/arrow-left.svg": "/Monogram/static/media/arrow-left.d68871a27accb5ced8e109fb75dbf8fa.svg",
     "static/media/facebook.svg": "/Monogram/static/media/facebook.f3393cefe7db82249c86d82d1b47359b.svg",
     "main.c550b629.css.map": "/Monogram/static/css/main.c550b629.css.map",
-    "main.f4682732.js.map": "/Monogram/static/js/main.f4682732.js.map",
+    "main.27560875.js.map": "/Monogram/static/js/main.27560875.js.map",
     "592.ed2663c9.chunk.js.map": "/Monogram/static/js/592.ed2663c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c550b629.css",
-    "static/js/main.f4682732.js"
+    "static/js/main.27560875.js"
   ]
 }
