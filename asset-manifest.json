@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.85ebe805.css",
+    "main.js": "/static/js/main.a917dac2.js",
+    "static/js/592.ed2663c9.chunk.js": "/static/js/592.ed2663c9.chunk.js",
+    "static/media/shop_cta_xl_896f6b8270.webp": "/static/media/shop_cta_xl_896f6b8270.1bd3caa741ceecfb9925.webp",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "static/media/better_editing_guaranteed.svg": "/static/media/better_editing_guaranteed.5d76068b92584bed05b94582138f559a.svg",
+    "static/media/shop-banner-module.webp": "/static/media/shop-banner-module.47b71bb8b2b07bdc0ef7.webp",
+    "static/media/sezzle.svg": "/static/media/sezzle.4fa87a4ff9d4dd50efe235101c3bd9f9.svg",
+    "static/media/appay.svg": "/static/media/appay.a33c482f7ed857d18d4cadc5d792817e.svg",
+    "static/media/logo.svg": "/static/media/logo.fb0ce164baeb5f183cb412b92007cf07.svg",
+    "static/media/shoppay.svg": "/static/media/shoppay.c7c323b06d1685b35063c6fa7b239ff4.svg",
+    "static/media/gpay.svg": "/static/media/gpay.990b0a1a313f397733bfd14ab6bc8aef.svg",
+    "static/media/amex.svg": "/static/media/amex.d3160c9393d53d19de8fac49b7a8fc29.svg",
+    "static/media/visa.svg": "/static/media/visa.2b682140d263f0c7d3130854829db275.svg",
+    "index.html": "/index.html",
+    "static/media/instagram.svg": "/static/media/instagram.4be00d372df9ed66ffa38e45236a498b.svg",
+    "static/media/twit.svg": "/static/media/twit.75b33c267d06f2af045d76aad446b750.svg",
+    "static/media/mastercard.svg": "/static/media/mastercard.cdc2bb00d76ffc9f34fb7dac8305b818.svg",
+    "static/media/youtube.svg": "/static/media/youtube.f21e966a3c0a5a81a5dded8551f71cbf.svg",
+    "static/media/star.svg": "/static/media/star.dd458f7548098cc474a7127c1d7476b9.svg",
+    "static/media/info.svg": "/static/media/info.dd8103045a5d155d5654074cf66f7521.svg",
+    "static/media/x.svg": "/static/media/x.27ce29c7b0f5cd09a7e7b45784f3f61d.svg",
+    "static/media/arrow-left.svg": "/static/media/arrow-left.d68871a27accb5ced8e109fb75dbf8fa.svg",
+    "static/media/facebook.svg": "/static/media/facebook.f3393cefe7db82249c86d82d1b47359b.svg",
+    "main.85ebe805.css.map": "/static/css/main.85ebe805.css.map",
+    "main.a917dac2.js.map": "/static/js/main.a917dac2.js.map",
+    "592.ed2663c9.chunk.js.map": "/static/js/592.ed2663c9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.85ebe805.css",
+    "static/js/main.a917dac2.js"
+  ]
+}
