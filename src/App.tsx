@@ -14,7 +14,7 @@ function App() {
 					<Menu />
 					<main className="main">
 						<Routes>
-							<Route path="/" element={<ShopPage />} />
+							<Route path="/shop" element={<ShopPage />} />
 							<Route path="/shop" element={<ShopPage />} />
 							<Route path="/products/:id" element={<ProductsPage />} />
 						</Routes>
