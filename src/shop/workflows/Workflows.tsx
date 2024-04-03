@@ -38,7 +38,7 @@ function Workflows(data: WorkflowsProps) {
 					className="workflows__body-el-art position-relative"
 					title={element.title}
 				>
-					<Link to={`/products/${element.id}`}>
+					<Link to={`/products?id=${element.id}`}>
 						<header className="image-container position-relative w-100">
 							{element.image2 === "" ? (
 								<img
