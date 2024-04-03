@@ -26,6 +26,7 @@
 			@include font-style-bag-footer;
 		}
 		.bag__subtotal-btn {
+			color: #212529;
 			background-color: #efc2b3;
 			@include font-style-bag-footer;
 			transition: all 0.3s ease-in-out;

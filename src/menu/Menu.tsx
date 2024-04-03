@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import { Link } from "react-router-dom";
 import "../scss/menu/menu.scss";
 import Container from "react-bootstrap/Container";
@@ -9,10 +9,26 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ReactComponent as Logo } from "../image/logo/logo.svg";
 import BagIcon from "../bag/BagIcon";
+interface CustomLinkProps {
+	to: string;
+	children: ReactNode;
+}
 
 function Menu() {
 	const [showNavDropdown, setShowNavDropdown] = useState(false);
 	const [isOffcanvasShown, setIsOffcanvasShown] = useState(false);
+
+	const CustomLink: React.FC<CustomLinkProps> = ({ to, children }) => {
+		return (
+			<Link
+				to={to}
+				onClick={() => setIsOffcanvasShown(false)}
+				className="router-link"
+			>
+				{children}
+			</Link>
+		);
+	};
 	return (
 		<div className="menu">
 			<Navbar
@@ -45,10 +61,10 @@ function Menu() {
 							</Offcanvas.Header>
 							<Offcanvas.Body className="navbar-custom__body">
 								<Nav className="justify-content-end flex-grow-1 pe-3 align-items-start">
-									<Nav.Link href="#">How it Works</Nav.Link>
+									<CustomLink to="/">How it Works</CustomLink>
 									<NavDropdown
 										className={
-											showNavDropdown === true
+											isOffcanvasShown === true
 												? "navbar-custom__body-dropdown-offc"
 												: "navbar-custom__body-dropdown"
 										}
@@ -69,16 +85,10 @@ function Menu() {
 											Mini console
 										</NavDropdown.Item>
 									</NavDropdown>
-									<Nav.Link href="#">Download</Nav.Link>
-									<Nav.Link href="#">Blog</Nav.Link>
-									<Nav.Link href="#">Support</Nav.Link>
-									<Link
-										to="/shop"
-										onClick={() => setIsOffcanvasShown(false)}
-										className="router-link"
-									>
-										Shop
-									</Link>
+									<CustomLink to="/">Download</CustomLink>
+									<CustomLink to="/">Blog</CustomLink>
+									<CustomLink to="/">Support</CustomLink>
+									<CustomLink to="/shop">Shop</CustomLink>
 								</Nav>
 							</Offcanvas.Body>
 						</Navbar.Offcanvas>

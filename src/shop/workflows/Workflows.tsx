@@ -74,7 +74,7 @@ function Workflows(data: WorkflowsProps) {
 							</span>
 						</div>
 						<p>{element.shortInfo}</p>
-						<Link to={`/products/${element.id}`}>
+						<Link to={`/products?id=${element.id}`}>
 							<button
 								className="workflows__body-el-art-footbtn text-uppercase position-absolute top-0 end-0"
 								type="button"
