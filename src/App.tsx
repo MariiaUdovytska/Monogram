@@ -8,7 +8,7 @@ import ProductsPage from "./product-page/ProductsPage";
 
 function App() {
 	return (
-		<Router>
+		<Router basename="/Monogram">
 			<div className="wrapper">
 				<div className="page">
 					<Menu />
