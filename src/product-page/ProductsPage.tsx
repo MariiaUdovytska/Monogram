@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import "../scss/products-page/products-page.scss";
 import DetailProducts from "./detailProducts/DetailProducts";
 import productsData from "../data/products.json";
@@ -9,7 +9,8 @@ import AdditionalInfo from "./AdditionalInfo";
 import ReviewsWrapper from "./reviews/ReviewsWrapper";
 
 function ProductsPage() {
-	const { id } = useParams();
+	const [searchParams] = useSearchParams();
+	let id = searchParams.get("id");
 	const product = productsData.find((p) => p.id.toString() === id);
 	const reviewsRef = useRef<HTMLDivElement>(null);
 
